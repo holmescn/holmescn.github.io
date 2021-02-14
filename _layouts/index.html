@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="zh">
+  <head>
+    {% include meta.html %}
+    {% include links.html %}
+    {% include analytics.html %}
+  </head>
+  <body>
+    <!-- this is the top navigation -->
+    {% include nav.html %}
+    <!-- end of top navigation -->
+    <!-- this is the title section -->
+    {% include title_section.html %}
+    <!-- end of title section -->    
+    <!-- this is the main page content -->
+    <div class="main-content">
+      <div class="container">
+        <div class="columns is-multiline is-centered">
+          <!-- posts (image length should be 400; height can be whatever) -->
+          <div class="column is-8">
+            {{ content }}
+            <!-- posts should end here -->
+
+            <!-- pagination under posts -->
+            <div class="section">
+              <nav class="pagination is-medium is-centered">
+                {% if paginator.previous_page %}
+                  <a class="pagination-previous" href="{{ paginator.previous_page_path }}">Previous</a>
+                {% else %}
+                  <a class="pagination-previous" disabled>Previous</a>
+                {% endif %}
+                {% if paginator.next_page %}
+                  <a class="pagination-next" href="{{ paginator.next_page_path }}">Next</a>
+                {% else %}
+                  <a class="pagination-next" disabled>Next</a>
+                {% endif %}
+                <ul class="pagination-list">
+                  {% for i in (1..paginator.total_pages) %}
+                    {% if paginator.page == i %}
+                      <li><a class="pagination-link is-current">{{ i }}</a></li>
+                    {% else %}
+                      <li><a class="pagination-link">{{ i }}</a></li>
+                    {% endif %}
+                  {% endfor %}
+                </ul>
+              </nav>
+            </div>
+            <!-- end of pagination -->
+          </div>
+          <!-- end of posts column -->
+
+          <!-- sidebar with plugins/details/etc -->
+          <div class="column is-4 is-narrow">
+            {% include sidebar_about.html %}
+            {% include sidebar_author.html %}
+            {% include sidebar_example.html %}
+          </div>
+          <!-- end of plugins/etc/ column -->
+        </div>
+      </div>
+    </div>
+    <!-- end of main page content -->
+
+    <!-- footer begins here -->
+    {% include footer.html %}
+    <!-- footer end here -->
+  </body>
+</html>

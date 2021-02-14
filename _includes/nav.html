@@ -1,0 +1,41 @@
+<nav class="nav has-shadow">
+  <div class="container">
+    <div class="nav-left">
+      <a class="nav-item">
+      <img src="http://bulma.io/images/bulma-logo.png" alt="Bulma logo">
+      </a>
+    </div>
+    <div class="nav-center is-hidden-mobile">
+      <a class="nav-item is-tab" href="#">
+        <span class="icon">
+        <i class="fa fa-facebook"></i>
+        </span>
+      </a>
+      <a class="nav-item is-tab" href="#">
+        <span class="icon">
+        <i class="fa fa-twitter"></i>
+        </span>
+      </a>
+      <a class="nav-item is-tab" href="#">
+        <span class="icon">
+        <i class="fa fa-instagram"></i>
+        </span>
+      </a>
+      <a class="nav-item is-tab" href="#">
+        <span class="icon">
+        <i class="fa fa-rss"></i>
+        </span>
+      </a>
+    </div>
+    <span class="nav-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </span>
+    <div class="nav-right nav-menu">
+      <a class="nav-item is-tab {% if page.name == 'index.html' %}is-active{% endif %}" href="/">Home</a>
+      <a class="nav-item is-tab {% if page.name == 'history.md' %}is-active{% endif %}" href="/history/">History</a>
+      <a class="nav-item is-tab {% if page.name == 'about.md' %}is-active{% endif %}" href="/about/">About</a>
+    </div>
+  </div>
+</nav>
