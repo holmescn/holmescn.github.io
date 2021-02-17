@@ -34,11 +34,7 @@
               <hr/>
             </div>
           </div>
-          <div class="content-wrapper">
-            {{ content }}
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales pulvinar laoreet. Quisque consequat justo velit, at aliquam ex aliquet eu. Nulla facilisi. Vivamus ac nibh congue, faucibus purus sit amet, malesuada est. Mauris fringilla vulputate libero, et interdum purus sollicitudin vel. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales pulvinar laoreet. Quisque consequat justo velit, at aliquam ex aliquet eu. Nulla facilisi. Vivamus ac nibh congue, faucibus purus sit amet, malesuada est. Mauris fringilla vulputate libero, et interdum purus sollicitudin vel. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales pulvinar laoreet. Quisque consequat justo velit, at aliquam ex aliquet eu. Nulla facilisi. Vivamus ac nibh congue, faucibus purus sit amet, malesuada est. Mauris fringilla vulputate libero, et interdum purus sollicitudin vel. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam sodales pulvinar laoreet. Quisque consequat justo velit, at aliquam ex aliquet eu. Nulla facilisi. Vivamus ac nibh congue, faucibus purus sit amet, malesuada est. Mauris fringilla vulputate libero, et interdum purus sollicitudin vel.</p>
-            <p>{{ page.url }}</p>
-          </div>
+          <div class="content">{{ content }}</div>
           <div class="end-post-details">
             <div class="is-pulled-left">
               <i>{{ page.date | date_to_long_string }} by <a href="{{ site.author_url }}">{{ site.author }}</a></i>
@@ -68,7 +64,7 @@
           <hr/>
           <div class="end-content-nav-wrapper">
             <div class="is-pulled-left">
-              <a href="{{ site.url }}">
+              <a href="/">
                 <i class="fa fa-angle-double-left" aria-hidden="true"> Back to Home</i>
               </a>
             </div>
@@ -86,7 +82,6 @@
     <div class="column is-4 is-narrow">
       {% include sidebar_about.html %}
       {% include sidebar_author.html %}
-      {% include sidebar_example.html %}
     </div>
     <!-- end of main page content -->
 

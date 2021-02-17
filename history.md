@@ -2,6 +2,7 @@
 layout:     page
 title:      Repositories History
 permalink:  /history/
+style:      history.css
 ---
 
 To the projects and repositories I created and deleted.

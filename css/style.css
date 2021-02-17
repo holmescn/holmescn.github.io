@@ -89,3 +89,7 @@ body, .section {
     border-radius: 0px;
 }
 
+.read-it {
+    padding-left: 1em;
+    font-size: 0.5em;
+}

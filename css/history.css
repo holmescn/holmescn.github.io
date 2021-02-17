@@ -1,0 +1,15 @@
+.content > h2 {
+    border-left-width: 2px;
+    border-left-style: solid;
+    min-height: 1.5em;
+    line-height: 1.5em;
+    padding-left: 0.5em;
+}
+
+.content > h3 {
+    border-left-width: 4px;
+    border-left-style: double;
+    min-height: 1.5em;
+    line-height: 1.5em;
+    padding-left: 0.5em;
+}
